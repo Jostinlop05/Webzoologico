@@ -13,8 +13,11 @@ export class AnimalComponent {
   constructor(private animalService:AnimalService) {}
  
   getAllAnimals() {
+    console.log("algo");
     this.animalService.getAllAnimalsData().subscribe((data: {}) => {
+      
       this.animalList=data;
+      
       console.log(this.animalList)
     });
   }
